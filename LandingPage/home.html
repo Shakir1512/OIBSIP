@@ -9,6 +9,14 @@
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("h7x6riFA9qNr-jHXV");
+        })();
+    </script>
+
+    <script src="//code.tidio.co/y18qasahchbwmr3i4wr1yzktniji6tqc.js" async></script>
 </head>
 
 <body>
@@ -214,20 +222,20 @@
                 <img src="img/order-now.jpg" alt="">
             </div>
 
-            <form action="">
+            <form>
                 <div class="inputbox">
-                    <input type="type" name="username" placeholder="name" required />
-                    <input type="type" name="password" placeholder="email" required />
+                    <input type="type" id="fullName" name="username" placeholder="name" required />
+                    <input type="type" itemref="email_id" name="password" placeholder="email" required />
                 </div>
 
                 <div class="inputbox">
-                    <input type="type" name="number" placeholder="number" required />
-                    <input type="type" name="food name" placeholder="food name" required />
+                    <input type="type" id="numBer" name="number" placeholder="number" required />
+                    <input type="type" id="foodname" name="food name" placeholder="food name" required />
                 </div>
 
-                <textarea placeholder="address" name="" id="" cols="30" rows="10"></textarea>
+                <textarea id="message" placeholder="address" name="" id="" cols="30" rows="10"></textarea>
 
-                <input type="submit" value="order now" class="btn">
+                <button type="submit" onclick="sendMail()" class="btn">Order Now</button>
 
             </form>
         </div>
